@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputPath>..\bin\Debug</OutputPath>
+    <DocumentationFile>..\bin\Debug\netstandard2.0\ReSharp.Data.iBoxDB.xml</DocumentationFile>
+    <OutputPath>..\bin\Debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputPath>..\bin\Release</OutputPath>
+    <DocumentationFile>..\bin\Release\netstandard2.0\ReSharp.Data.iBoxDB.xml</DocumentationFile>
+    <DebugType></DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="iBoxDB" Version="2.23.0" />
+  </ItemGroup>
+</Project>
