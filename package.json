@@ -2,7 +2,7 @@
 	"name": "com.github.cosmos53076.resharp.data.iboxdb",
 	"displayName": "ReSharp.Data.iBoxDB",
 	"description": "iBoxDB is a fast transactional table style document NoSQL Application Database. This repository include iBoxDBContext for performing iBoxDB database easily.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"unity": "2018.3",
 	"license": "MIT"
 }
