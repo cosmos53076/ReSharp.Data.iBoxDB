@@ -348,4 +348,4 @@ MigrationBackup/
 .ionide/
 
 
-upm/Assets/ReSharp.Data.iBoxDB
+upm/Assets/ReSharp.Data.iBoxDB/*

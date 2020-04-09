@@ -17,6 +17,6 @@
     <DebugType></DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="iBoxDB" Version="2.23.0" />
+    <PackageReference Include="iBoxDB" Version="2.21.0" />
   </ItemGroup>
 </Project>
