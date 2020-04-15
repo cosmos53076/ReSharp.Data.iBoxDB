@@ -1,0 +1,4 @@
+[submodule "upm"]
+	path = upm/Assets/ReSharp.Data.iBoxDB
+	url = https://github.com/iDreamsOfGame/ReSharp.Data.iBoxDB.git
+	branch = upm
