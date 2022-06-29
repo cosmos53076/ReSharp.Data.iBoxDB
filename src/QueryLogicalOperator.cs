@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Jerry Lee. All rights reserved. Licensed under the MIT License. See LICENSE in the
 // project root for license information.
 
-namespace ReSharp.Data.iBoxDB
+namespace ReSharp.Data.IBoxDB
 {
     /// <summary>
     /// Enum that defines the database query logical operator.

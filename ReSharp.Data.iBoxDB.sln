@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReSharp.Data.iBoxDB", "src\ReSharp.Data.iBoxDB.csproj", "{0C87C514-80BD-472D-8F10-39570F4DA4B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReSharp.Data.IBoxDB", "src\ReSharp.Data.iBoxDB.csproj", "{0C87C514-80BD-472D-8F10-39570F4DA4B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReSharp.Data.iBoxDB.Tests", "test\ReSharp.Data.iBoxDB.Tests.csproj", "{77962CEA-08E4-4B77-9C07-E1D690EF5034}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReSharp.Data.IBoxDB.Tests", "test\ReSharp.Data.iBoxDB.Tests.csproj", "{77962CEA-08E4-4B77-9C07-E1D690EF5034}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
