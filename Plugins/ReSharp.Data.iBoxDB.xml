@@ -4,61 +4,66 @@
         <name>ReSharp.Data.iBoxDB</name>
     </assembly>
     <members>
-        <member name="T:ReSharp.Data.iBoxDB.iBoxDBContext">
+        <member name="T:ReSharp.Data.IBoxDB.IBoxDBAdapter">
             <summary>
-            An iBoxDBContext instance represents a session with the iBoxDB and can be used to query and save instances of your entities. Implements the
+            An IBoxDBAdapter instance represents a session with the iBoxDB and can be used to query and save instances of your entities. Implements the
             <see cref="T:System.IDisposable" />
             </summary>
             <seealso cref="T:System.IDisposable" />
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.#ctor">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:ReSharp.Data.iBoxDB.iBoxDBContext" /> class with cache mode.
+            Initializes a new instance of the <see cref="T:ReSharp.Data.IBoxDB.IBoxDBAdapter" /> class with cache mode.
             </summary>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.#ctor(System.String)">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:ReSharp.Data.iBoxDB.iBoxDBContext" /> class with a database folder path.
+            Initializes a new instance of the <see cref="T:ReSharp.Data.IBoxDB.IBoxDBAdapter" /> class with a database folder path.
             </summary>
             <param name="dbFolderPath">The database folder path.</param>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.#ctor(System.String,System.Byte[])">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.#ctor(System.String,System.Byte[])">
             <summary>
-            Initializes a new instance of the <see cref="T:ReSharp.Data.iBoxDB.iBoxDBContext" /> class with a database folder path and the raw data of database.
+            Initializes a new instance of the <see cref="T:ReSharp.Data.IBoxDB.IBoxDBAdapter" /> class with a database folder path and the raw data of database.
             </summary>
             <param name="dbFolderPath">The database folder path.</param>
             <param name="dbFileRawData">The database file raw data.</param>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.#ctor(System.Byte[])">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.#ctor(System.Byte[])">
             <summary>
-            Initializes a new instance of the <see cref="T:ReSharp.Data.iBoxDB.iBoxDBContext" /> class.
+            Initializes a new instance of the <see cref="T:ReSharp.Data.IBoxDB.IBoxDBAdapter" /> class.
             </summary>
             <param name="dbFileRawData">The database file raw data.</param>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.#ctor(System.String,System.Int64)">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.#ctor(System.String,System.Int64)">
             <summary>
-            Initializes a new instance of the <see cref="T:ReSharp.Data.iBoxDB.iBoxDBContext" /> class.
+            Initializes a new instance of the <see cref="T:ReSharp.Data.IBoxDB.IBoxDBAdapter" /> class.
             </summary>
             <param name="dbFolderPath">The database folder path.</param>
             <param name="localAddress">The local address.</param>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Finalize">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Finalize">
             <summary>
-            Finalizes an instance of the <see cref="T:ReSharp.Data.iBoxDB.iBoxDBContext" /> class.
+            Finalizes an instance of the <see cref="T:ReSharp.Data.IBoxDB.IBoxDBAdapter" /> class.
             </summary>
         </member>
-        <member name="P:ReSharp.Data.iBoxDB.iBoxDBContext.IsOpen">
+        <member name="P:ReSharp.Data.IBoxDB.IBoxDBAdapter.IsOpen">
             <summary>
             Gets a value indicating whether the database connection is open.
             </summary>
             <value><c>true</c> if the database connection is open; otherwise, <c>false</c>.</value>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Dispose">
+        <member name="P:ReSharp.Data.IBoxDB.IBoxDBAdapter.Database">
             <summary>
-            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            Gets the database object of iBoxDB.
             </summary>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.EnsureTable``1(System.String,System.String[])">
+        <member name="P:ReSharp.Data.IBoxDB.IBoxDBAdapter.Box">
+            <summary>
+            Gets the box object of iBoxDB database.
+            </summary>
+        </member>
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.EnsureTable``1(System.String,System.String[])">
             <summary>
             Ensures the table is in database. If not exists, create a table.
             </summary>
@@ -66,36 +71,19 @@
             <param name="tableName">Name of the table.</param>
             <param name="names">The property names of table data.</param>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.GetBuffer">
-            <summary>
-            Gets the buffer.
-            </summary>
-            <returns>System.Byte[].</returns>
-        </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Insert``1(System.String,``0[])">
-            <summary>
-            Inserts data into database.
-            </summary>
-            <typeparam name="T">The type of table data.</typeparam>
-            <param name="tableName">The name of table.</param>
-            <param name="values">The data need to be inserted.</param>
-            <returns><c>true</c> if data insert success, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Insert``1(``0[])">
-            <summary>
-            Inserts data into database.
-            </summary>
-            <typeparam name="T">The type of table data.</typeparam>
-            <param name="values">The data need to be inserted.</param>
-            <returns><c>true</c> if data insert success, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Open">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Open">
             <summary>
             Opens the database.
             </summary>
             <exception cref="T:System.ObjectDisposedException">database</exception>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Query``1(System.String,System.String,System.Object[])">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.GetBuffer">
+            <summary>
+            Gets the buffer.
+            </summary>
+            <returns>System.Byte[].</returns>
+        </member>
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Query``1(System.String,System.String,System.Object[])">
             <summary>
             Queries data with string of specific query language.
             </summary>
@@ -105,9 +93,18 @@
             <param name="arguments">The arguments.</param>
             <returns>A <see cref="T:System.Collections.Generic.List`1" /> that contains query results.</returns>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Select``1(System.String,System.String,System.Object)">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Get``1(System.String,System.Object[])">
             <summary>
-            Selects the specified objects with the <c>tableName</c> and the <c>value</c> of <c>key</c>.
+            Gets the specified object with the <c>tableName</c> and the <c>keys</c>.
+            </summary>
+            <typeparam name="T">Specifies the object type of return.</typeparam>
+            <param name="tableName">Name of the table.</param>
+            <param name="keys">The keys to locate the specified object.</param>
+            <returns>The object that was found.</returns>
+        </member>
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Get``1(System.String,System.String,System.Object)">
+            <summary>
+            Gets the specified objects with the <c>tableName</c> and the <c>value</c> of <c>key</c>.
             </summary>
             <typeparam name="T">Specifies the object type of return.</typeparam>
             <param name="tableName">Name of the table.</param>
@@ -115,9 +112,9 @@
             <param name="value">The value of key to locate the specified object.</param>
             <returns>The objects that was found.</returns>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Select``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},ReSharp.Data.iBoxDB.QueryLogicalOperator)">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},ReSharp.Data.IBoxDB.QueryLogicalOperator)">
             <summary>
-            Selects the specified objects with the <c>tableName</c> and multi-conditions.
+            Gets the specified objects with the <c>tableName</c> and multi-conditions.
             </summary>
             <typeparam name="T">Specifies the object type of return.</typeparam>
             <param name="tableName">Name of the table.</param>
@@ -125,45 +122,58 @@
             <param name="logicalOperator">The logical operator.</param>
             <returns>The objects that was found.</returns>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.SelectAll``1(System.String)">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.GetAll``1(System.String)">
             <summary>
-            Get all data in the table.
+            Gets all data in the table.
             </summary>
             <typeparam name="T">The type of the data in database.</typeparam>
             <param name="tableName">Name of the table.</param>
             <returns>The data list found in database.</returns>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.SelectKey``1(System.String,System.Object[])">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Insert``1(System.String,``0)">
             <summary>
-            Selects the specified object with the <c>tableName</c> and the <c>keys</c>.
+            Inserts data into database.
             </summary>
-            <typeparam name="T">Specifies the object type of return.</typeparam>
-            <param name="tableName">Name of the table.</param>
-            <param name="keys">The keys to locate the specified object.</param>
-            <returns>The object that was found.</returns>
+            <typeparam name="T">The type of table data.</typeparam>
+            <param name="tableName">The name of table.</param>
+            <param name="value">The data need to be inserted.</param>
+            <returns><c>true</c> if data insert success, <c>false</c> otherwise.</returns>
         </member>
-        <member name="M:ReSharp.Data.iBoxDB.iBoxDBContext.Dispose(System.Boolean)">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Insert``1(``0[])">
+            <summary>
+            Inserts data into database.
+            </summary>
+            <typeparam name="T">The type of table data.</typeparam>
+            <param name="values">The data need to be inserted.</param>
+            <returns><c>true</c> if data insert success, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Dispose(System.Boolean)">
             <summary>
             Releases unmanaged and - optionally - managed resources.
             </summary>
             <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
         </member>
-        <member name="T:ReSharp.Data.iBoxDB.QueryLogicalOperator">
+        <member name="T:ReSharp.Data.IBoxDB.QueryLogicalOperator">
             <summary>
             Enum that defines the database query logical operator.
             </summary>
         </member>
-        <member name="F:ReSharp.Data.iBoxDB.QueryLogicalOperator.None">
+        <member name="F:ReSharp.Data.IBoxDB.QueryLogicalOperator.None">
             <summary>
             No query logical operator specified.
             </summary>
         </member>
-        <member name="F:ReSharp.Data.iBoxDB.QueryLogicalOperator.And">
+        <member name="F:ReSharp.Data.IBoxDB.QueryLogicalOperator.And">
             <summary>
             The query logical operator of And.
             </summary>
         </member>
-        <member name="F:ReSharp.Data.iBoxDB.QueryLogicalOperator.Or">
+        <member name="F:ReSharp.Data.IBoxDB.QueryLogicalOperator.Or">
             <summary>
             The query logical operator of Or.
             </summary>
