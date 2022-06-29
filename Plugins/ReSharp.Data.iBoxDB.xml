@@ -139,12 +139,12 @@
             <param name="value">The data need to be inserted.</param>
             <returns><c>true</c> if data insert success, <c>false</c> otherwise.</returns>
         </member>
-        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Insert``1(``0[])">
+        <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Insert``1(``0)">
             <summary>
             Inserts data into database.
             </summary>
             <typeparam name="T">The type of table data.</typeparam>
-            <param name="values">The data need to be inserted.</param>
+            <param name="value">The data need to be inserted.</param>
             <returns><c>true</c> if data insert success, <c>false</c> otherwise.</returns>
         </member>
         <member name="M:ReSharp.Data.IBoxDB.IBoxDBAdapter.Dispose">
