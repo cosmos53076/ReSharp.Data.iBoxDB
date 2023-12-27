@@ -7,6 +7,6 @@
 	<LangVersion>8</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="iBoxDB" Version="3.5.0" />
+    <PackageReference Include="iBoxDB" Version="3.9.2" />
   </ItemGroup>
 </Project>
