@@ -2,8 +2,8 @@
 	"name": "io.github.idreamsofgame.resharp.data.iboxdb",
 	"displayName": "ReSharp.Data.iBoxDB",
 	"description": "iBoxDB is a fast transactional table style document NoSQL Application Database. This repository include iBoxDBContext for working with iBoxDB database easily.",
-	"version": "2.0.2",
-	"unity": "2018.3",
+	"version": "2.0.3",
+	"unity": "2019.4",
 	"author": {
 		"name": "iDreamsOfGame",
 		"url": "https://github.com/iDreamsOfGame"
